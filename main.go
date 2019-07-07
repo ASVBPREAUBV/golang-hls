@@ -22,6 +22,6 @@ func main() {
 	http.Handle("/frame/", NewDebugHandlerWrapper(http.StripPrefix("/frame/", NewFrameHandler(contentDir))))
 	http.Handle("/playlist/", NewDebugHandlerWrapper(http.StripPrefix("/playlist/", NewPlaylistHandler(contentDir))))
 	http.Handle("/segments/", NewDebugHandlerWrapper(http.StripPrefix("/segments/", NewStreamHandler(contentDir))))
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8081", nil)
 
 }
